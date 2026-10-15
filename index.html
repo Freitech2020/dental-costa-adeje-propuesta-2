@@ -60,6 +60,7 @@
       line-height: 1.65em;
       font-weight: 400;
       overflow-x: hidden;
+      overflow-wrap: break-word;
       width: 100%;
       position: relative;
     }
@@ -178,6 +179,8 @@
       padding: 0.4rem 1rem;
       border-radius: var(--radius-full);
       margin-bottom: 1.2rem;
+      max-width: 100%;
+      box-sizing: border-box;
     }
 
     /* Glassmorphism Card Formula (Ley 8 & Theme Spec) */
@@ -1072,6 +1075,37 @@
     @media (max-width: 992px) {
       .contact-grid {
         grid-template-columns: 1fr;
+        min-width: 0;
+      }
+      .contact-grid > div {
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .contact-info-item > div {
+        min-width: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .badge-champagne {
+        white-space: normal;
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
+        padding: 0.35rem 0.75rem;
+      }
+      .booking-box {
+        padding: 1.25rem 1rem;
+        min-width: 0;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .booking-box .btn {
+        white-space: normal;
+        padding: 0.85rem 1rem;
+        font-size: 0.95rem;
+        max-width: 100%;
+        box-sizing: border-box;
       }
     }
 
