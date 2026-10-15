@@ -1,0 +1,2490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dental Costa Adeje — Boutique Dental Concierge & Estética de Alta Gama</title>
+  <meta name="description" content="Experiencia odontológica boutique privada en Costa Adeje, Tenerife Sur. Diseño digital de sonrisa, carillas de porcelana, implantes de precisión y servicio concierge VIP para pacientes internacionales.">
+
+  <!-- Google Fonts: Playfair Display (Editorial Serif) & Outfit (Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       CSS Reset & Core Tokens - Token Design Freitech 2026 (Dark Anthracite & Champagne)
+       ========================================================================== */
+    :root {
+      --bg-anthracite: #0E131F;
+      --bg-surface: #161C2D;
+      --bg-card: rgba(22, 28, 45, 0.75);
+      --bg-card-hover: rgba(26, 34, 54, 0.88);
+      --champagne-gold: #CFB16C;
+      --champagne-hover: #DFC587;
+      --champagne-glow: rgba(207, 177, 108, 0.25);
+      --champagne-border: rgba(207, 177, 108, 0.2);
+      --champagne-border-hover: rgba(207, 177, 108, 0.5);
+      --text-cream: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-dim: #64748B;
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --radius-sm: 12px;
+      --radius-md: 16px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --shadow-luxury: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+      --transition-smooth: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-anthracite);
+      color: var(--text-cream);
+      font-family: var(--font-body);
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: var(--bg-anthracite);
+      color: var(--text-cream);
+      font-family: var(--font-body);
+      font-size: 18px;
+      line-height: 1.65em;
+      font-weight: 400;
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+    }
+
+    /* Paragraph typography enforcement (Ley 8: >=18px desktop / >=16px mobile) */
+    p {
+      font-size: 18px;
+      line-height: 1.65em;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+
+    @media (max-width: 768px) {
+      p {
+        font-size: 16px !important;
+        line-height: 1.6em !important;
+      }
+    }
+
+    h1, h2, h3, h4 {
+      font-family: var(--font-heading);
+      color: var(--text-cream);
+      letter-spacing: -0.01em;
+      line-height: 1.25em;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 4.5vw, 3.6rem);
+      font-weight: 700;
+      line-height: 1.15em;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+    }
+
+    h3 {
+      font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+    }
+
+    h4 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: var(--champagne-gold);
+      text-decoration: none;
+      transition: var(--transition-smooth);
+    }
+
+    a:hover {
+      color: var(--champagne-hover);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* SVG Icon System (Ley 7) */
+    .icon {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      display: inline-block;
+      vertical-align: middle;
+      flex-shrink: 0;
+      transition: var(--transition-smooth);
+    }
+
+    .icon-lg {
+      width: 28px;
+      height: 28px;
+    }
+
+    /* Layout Containers */
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-spacing {
+      padding: 5.5rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .section-spacing {
+        padding: 3.5rem 0;
+      }
+    }
+
+    /* Badges & Accents */
+    .badge-champagne {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(207, 177, 108, 0.12);
+      border: 1px solid var(--champagne-border);
+      color: var(--champagne-gold);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 1.2rem;
+    }
+
+    /* Glassmorphism Card Formula (Ley 8 & Theme Spec) */
+    .glass-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--champagne-border);
+      border-radius: var(--radius-lg);
+      padding: 2.2rem;
+      box-shadow: var(--shadow-luxury);
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(207, 177, 108, 0.4), transparent);
+      opacity: 0.6;
+    }
+
+    .glass-card:hover {
+      border-color: var(--champagne-border-hover);
+      background: var(--bg-card-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 24px 50px -15px rgba(0, 0, 0, 0.75), 0 0 20px rgba(207, 177, 108, 0.12);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 0.95rem 1.9rem;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      border: none;
+      transition: var(--transition-smooth);
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-champagne {
+      background: var(--champagne-gold);
+      color: #0E131F !important;
+      box-shadow: 0 8px 24px -6px rgba(207, 177, 108, 0.4);
+    }
+
+    .btn-champagne:hover {
+      background: var(--champagne-hover);
+      color: #0E131F !important;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px -4px rgba(207, 177, 108, 0.55);
+    }
+
+    .btn-outline-gold {
+      background: rgba(22, 28, 45, 0.4);
+      color: var(--champagne-gold);
+      border: 1px solid var(--champagne-border);
+      backdrop-filter: blur(8px);
+    }
+
+    .btn-outline-gold:hover {
+      background: rgba(207, 177, 108, 0.15);
+      border-color: var(--champagne-gold);
+      color: var(--text-cream);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(14, 19, 31, 0.9);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(207, 177, 108, 0.15);
+      width: 100%;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 0.9rem 1.5rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+    }
+
+    .logo-img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: var(--transition-smooth);
+    }
+
+    .nav-link:hover {
+      color: var(--champagne-gold);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* 4-Language Interactive Switcher (ES, EN, DE, IT) */
+    .lang-switcher {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(22, 28, 45, 0.9);
+      border: 1px solid var(--champagne-border);
+      border-radius: var(--radius-full);
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.35rem 0.65rem;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .lang-btn:hover {
+      color: var(--text-cream);
+    }
+
+    .lang-btn.active {
+      background: var(--champagne-gold);
+      color: #0E131F !important;
+    }
+
+    .header-tel-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--champagne-gold);
+      padding: 0.5rem 0.9rem;
+      border-radius: var(--radius-full);
+      border: 1px solid var(--champagne-border);
+      background: rgba(22, 28, 45, 0.6);
+    }
+
+    .header-tel-btn:hover {
+      background: rgba(207, 177, 108, 0.15);
+      border-color: var(--champagne-gold);
+      color: var(--text-cream);
+    }
+
+    @media (max-width: 1024px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header-tel-btn {
+        display: none;
+      }
+    }
+
+    /* ==========================================================================
+       HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      padding: 4rem 0 5rem 0;
+      background: radial-gradient(circle at 75% 25%, rgba(207, 177, 108, 0.08) 0%, transparent 60%),
+                  radial-gradient(circle at 10% 80%, rgba(22, 28, 45, 0.6) 0%, transparent 50%),
+                  var(--bg-anthracite);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-lead {
+      font-size: 1.25rem;
+      line-height: 1.65em;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin-bottom: 2.8rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid rgba(207, 177, 108, 0.18);
+    }
+
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--champagne-gold);
+      line-height: 1.1;
+      margin-bottom: 0.3rem;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      line-height: 1.3;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-img-wrap {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--champagne-border);
+      box-shadow: 0 25px 60px -20px rgba(0, 0, 0, 0.85);
+      position: relative;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      transform: scale(1.02);
+      transition: transform 0.6s ease;
+    }
+
+    .hero-img-wrap:hover .hero-img {
+      transform: scale(1.05);
+    }
+
+    .hero-floating-badge {
+      position: absolute;
+      bottom: -18px;
+      left: -18px;
+      background: var(--bg-surface);
+      border: 1px solid var(--champagne-border);
+      padding: 1.2rem 1.6rem;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-luxury);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .floating-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-full);
+      background: rgba(207, 177, 108, 0.15);
+      color: var(--champagne-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .hero-img {
+        height: 380px;
+      }
+      .hero-floating-badge {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: 1rem;
+      }
+    }
+
+    /* ==========================================================================
+       PARTNERS & ACCREDITATION STRIP
+       ========================================================================== */
+    .partners-section {
+      background: #0B0F19;
+      border-top: 1px solid rgba(207, 177, 108, 0.12);
+      border-bottom: 1px solid rgba(207, 177, 108, 0.12);
+      padding: 2.2rem 0;
+    }
+
+    .partners-title {
+      text-align: center;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-dim);
+      margin-bottom: 1.5rem;
+    }
+
+    .partners-grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+    }
+
+    .partner-logo-wrap {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 0.6rem 1.4rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: var(--transition-smooth);
+      display: flex;
+      align-items: center;
+    }
+
+    .partner-logo-wrap:hover {
+      background: rgba(207, 177, 108, 0.1);
+      border-color: var(--champagne-border);
+      transform: translateY(-2px);
+    }
+
+    .partner-logo-img {
+      height: 30px;
+      width: auto;
+      filter: grayscale(100%) brightness(180%);
+      opacity: 0.75;
+      transition: var(--transition-smooth);
+    }
+
+    .partner-logo-wrap:hover .partner-logo-img {
+      filter: grayscale(0%) brightness(100%);
+      opacity: 1;
+    }
+
+    /* ==========================================================================
+       INTERACTIVE BEFORE / AFTER SMILE SLIDER (AWWWARDS / BEHANCE SPEC)
+       ========================================================================== */
+    .smile-section {
+      background: radial-gradient(circle at 50% 20%, rgba(207, 177, 108, 0.06) 0%, transparent 70%), var(--bg-anthracite);
+    }
+
+    .section-header-center {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 3.5rem auto;
+    }
+
+    .slider-card {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2.5rem;
+    }
+
+    .smile-comparison-slider {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--champagne-border);
+      box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.85);
+      background: #000;
+      user-select: none;
+      touch-action: none;
+      cursor: ew-resize;
+    }
+
+    .slider-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+
+    .slider-img-after {
+      z-index: 1;
+    }
+
+    .slider-img-before-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      overflow: hidden;
+      clip-path: inset(0 calc(100% - var(--slider-pos, 50%)) 0 0);
+      -webkit-clip-path: inset(0 calc(100% - var(--slider-pos, 50%)) 0 0);
+      transition: none;
+    }
+
+    .slider-divider-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: var(--slider-pos, 50%);
+      width: 2px;
+      background: var(--champagne-gold);
+      z-index: 3;
+      transform: translateX(-50%);
+      box-shadow: 0 0 16px rgba(207, 177, 108, 0.8), 0 0 3px #FFF;
+      pointer-events: none;
+    }
+
+    .slider-handle {
+      position: absolute;
+      top: 50%;
+      left: var(--slider-pos, 50%);
+      transform: translate(-50%, -50%);
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-full);
+      background: var(--champagne-gold);
+      border: 3px solid #0E131F;
+      box-shadow: 0 0 25px rgba(207, 177, 108, 0.8), 0 6px 14px rgba(0,0,0,0.5);
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0E131F;
+      cursor: ew-resize;
+      transition: transform 0.15s ease;
+    }
+
+    .slider-handle:hover, .slider-handle:active {
+      transform: translate(-50%, -50%) scale(1.1);
+      background: var(--champagne-hover);
+    }
+
+    .slider-handle svg {
+      width: 22px;
+      height: 22px;
+      stroke: #0E131F;
+      stroke-width: 2.2;
+    }
+
+    /* Floating Labels Inside Slider */
+    .slider-label {
+      position: absolute;
+      bottom: 24px;
+      z-index: 5;
+      background: rgba(14, 19, 31, 0.85);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--champagne-border);
+      color: var(--text-cream);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 0.5rem 1.1rem;
+      border-radius: var(--radius-full);
+      pointer-events: none;
+    }
+
+    .slider-label-before {
+      left: 24px;
+    }
+
+    .slider-label-after {
+      right: 24px;
+      border-color: rgba(207, 177, 108, 0.4);
+      color: var(--champagne-gold);
+    }
+
+    /* Accessible Slider Range (Hidden visually, accessible for screen readers & touch) */
+    .slider-range {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      z-index: 6;
+      cursor: ew-resize;
+      margin: 0;
+    }
+
+    .slider-meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .slider-meta-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+
+    .slider-meta-icon {
+      color: var(--champagne-gold);
+      margin-top: 2px;
+    }
+
+    .slider-meta-title {
+      font-weight: 600;
+      color: var(--text-cream);
+      font-size: 0.98rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .slider-meta-desc {
+      font-size: 0.88rem;
+      color: var(--text-dim);
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .smile-comparison-slider {
+        height: 360px;
+      }
+      .slider-card {
+        padding: 1.5rem;
+      }
+      .slider-meta-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+      .slider-label {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.8rem;
+        bottom: 14px;
+      }
+      .slider-label-before { left: 14px; }
+      .slider-label-after { right: 14px; }
+    }
+
+    /* ==========================================================================
+       VIP CONCIERGE & PRIVATE TRANSFER
+       ========================================================================== */
+    .concierge-section {
+      background: #0B0F19;
+      position: relative;
+    }
+
+    .concierge-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .concierge-img-card {
+      grid-column: span 3;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2.5rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .concierge-hero-img {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--champagne-border);
+      height: 380px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .concierge-feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      background: rgba(207, 177, 108, 0.12);
+      border: 1px solid var(--champagne-border);
+      color: var(--champagne-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+    }
+
+    @media (max-width: 992px) {
+      .concierge-grid {
+        grid-template-columns: 1fr;
+      }
+      .concierge-img-card {
+        grid-column: span 1;
+        grid-template-columns: 1fr;
+      }
+      .concierge-hero-img {
+        height: 280px;
+      }
+    }
+
+    /* ==========================================================================
+       MEDICAL AUTHORITY & E-E-A-T MODULE
+       ========================================================================== */
+    .doctor-section {
+      background: var(--bg-anthracite);
+    }
+
+    .doctors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .doctor-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .doctor-photo-wrap {
+      width: 100%;
+      height: 340px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .doctor-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.5s ease;
+    }
+
+    .doctor-card:hover .doctor-photo {
+      transform: scale(1.04);
+    }
+
+    .doctor-badge-floating {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(14, 19, 31, 0.88);
+      border: 1px solid var(--champagne-border);
+      color: var(--champagne-gold);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.35rem 0.8rem;
+      border-radius: var(--radius-full);
+      backdrop-filter: blur(8px);
+    }
+
+    .doctor-info {
+      padding: 1.8rem;
+    }
+
+    .doctor-name {
+      font-size: 1.45rem;
+      color: var(--text-cream);
+      margin-bottom: 0.3rem;
+    }
+
+    .doctor-role {
+      color: var(--champagne-gold);
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+    }
+
+    .doctor-colegiate {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      background: rgba(255, 255, 255, 0.04);
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 992px) {
+      .doctors-grid {
+        grid-template-columns: 1fr;
+      }
+      .doctor-photo-wrap {
+        height: 380px;
+      }
+    }
+
+    /* ==========================================================================
+       TREATMENTS & PRIVATE SERVICES
+       ========================================================================== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .service-top {
+      margin-bottom: 1.5rem;
+    }
+
+    .service-icon-box {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-sm);
+      background: rgba(207, 177, 108, 0.12);
+      border: 1px solid var(--champagne-border);
+      color: var(--champagne-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.2rem;
+    }
+
+    .service-features-list {
+      list-style: none;
+      margin: 1.2rem 0;
+    }
+
+    .service-feature-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .service-feature-item svg {
+      color: var(--champagne-gold);
+      width: 16px;
+      height: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ==========================================================================
+       CONTACT & BOOKING SUITE
+       ========================================================================== */
+    .contact-section {
+      background: #0B0F19;
+      position: relative;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .contact-info-list {
+      list-style: none;
+      margin: 2rem 0;
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-full);
+      background: rgba(207, 177, 108, 0.12);
+      border: 1px solid var(--champagne-border);
+      color: var(--champagne-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .contact-item-title {
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-item-val {
+      font-size: 1.05rem;
+      color: var(--text-cream);
+      font-weight: 500;
+    }
+
+    .booking-box {
+      background: var(--bg-card);
+      border: 1px solid var(--champagne-border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-luxury);
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-input, .form-select {
+      width: 100%;
+      background: rgba(14, 19, 31, 0.7);
+      border: 1px solid var(--champagne-border);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1rem;
+      color: var(--text-cream);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      transition: var(--transition-smooth);
+    }
+
+    .form-input:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--champagne-gold);
+      box-shadow: 0 0 12px rgba(207, 177, 108, 0.3);
+    }
+
+    .booking-confirm-box {
+      display: none;
+      margin-top: 1.2rem;
+      padding: 1rem;
+      background: rgba(37, 211, 102, 0.15);
+      border: 1px solid rgba(37, 211, 102, 0.4);
+      border-radius: var(--radius-sm);
+      color: #4ADE80;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    footer {
+      background: #070A11;
+      border-top: 1px solid rgba(207, 177, 108, 0.15);
+      padding: 4.5rem 0 2rem 0;
+      color: var(--text-dim);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .footer-col-title {
+      font-family: var(--font-heading);
+      color: var(--text-cream);
+      font-size: 1.15rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.6rem;
+    }
+
+    .footer-links a {
+      color: var(--text-dim);
+      font-size: 0.92rem;
+      transition: var(--transition-smooth);
+    }
+
+    .footer-links a:hover {
+      color: var(--champagne-gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 992px) {
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    /* ==========================================================================
+       RADAR WHATSAPP & STICKY MOBILE BAR
+       ========================================================================== */
+    .radar-wa-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      width: 62px;
+      height: 62px;
+      border-radius: var(--radius-full);
+      background: #25D366;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+      transition: var(--transition-smooth);
+      text-decoration: none;
+    }
+
+    .radar-wa-btn:hover {
+      transform: scale(1.08);
+      color: #FFFFFF;
+      box-shadow: 0 14px 30px rgba(37, 211, 102, 0.7);
+    }
+
+    .radar-wa-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: var(--radius-full);
+      border: 2px solid #25D366;
+      animation: waRadar 2s infinite ease-out;
+      pointer-events: none;
+    }
+
+    @keyframes waRadar {
+      0% { transform: scale(1); opacity: 0.8; }
+      100% { transform: scale(1.6); opacity: 0; }
+    }
+
+    .sticky-mobile-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1001;
+      background: rgba(14, 19, 31, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid var(--champagne-border);
+      padding: 0.75rem 1rem;
+      gap: 0.75rem;
+    }
+
+    .mobile-bar-btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 0.5rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .mobile-bar-btn-tel {
+      background: rgba(22, 28, 45, 0.9);
+      border: 1px solid var(--champagne-border);
+      color: var(--champagne-gold);
+    }
+
+    .mobile-bar-btn-wa {
+      background: #25D366;
+      color: #FFFFFF !important;
+    }
+
+    @media (max-width: 768px) {
+      .sticky-mobile-bar {
+        display: flex;
+      }
+      .radar-wa-btn {
+        bottom: 74px;
+        right: 18px;
+        width: 52px;
+        height: 52px;
+      }
+      body {
+        padding-bottom: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dynamic SVG Spritesheet (Ley 7 - Master 16 Symbols) -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true">
+    <symbol id="icon-diente" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4.5 9c-.5-3.5 1.5-6 4.5-6 1.8 0 2.5 1 3 1s1.2-1 3-1c3 0 5 2.5 4.5 6-.8 5.5-2.5 12-4.5 12-1.5 0-2-3.5-3-3.5s-1.5 3.5-3 3.5c-2 0-3.7-6.5-4.5-12z"/>
+    </symbol>
+    <symbol id="icon-implante" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2v20M7 6h10M8 10h8M9 14h6M10 18h4"/>
+      <path d="M7 6c0-2 2-4 5-4s5 2 5 4"/>
+    </symbol>
+    <symbol id="icon-cirugia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14.5 4.5l5 5L7 22H2v-5L14.5 4.5z"/>
+      <path d="M12 7l5 5"/>
+    </symbol>
+    <symbol id="icon-ortodoncia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+      <rect x="7" y="10" width="3" height="4" rx="1"/>
+      <rect x="14" y="10" width="3" height="4" rx="1"/>
+      <path d="M4 12h3m7 0h3m-7 0h4"/>
+    </symbol>
+    <symbol id="icon-corona" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 18h20L19 7l-5 5-2-8-2 8-5-5L2 18z"/>
+      <path d="M5 21h14"/>
+    </symbol>
+    <symbol id="icon-sonrisa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+      <line x1="9" y1="9" x2="9.01" y2="9"/>
+      <line x1="15" y1="9" x2="15.01" y2="9"/>
+    </symbol>
+    <symbol id="icon-sedacion" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/>
+      <path d="M16 6h3l-3 3h3"/>
+    </symbol>
+    <symbol id="icon-transporte" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="1" y="3" width="15" height="13" rx="2"/>
+      <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+      <circle cx="5.5" cy="18.5" r="2.5"/>
+      <circle cx="18.5" cy="18.5" r="2.5"/>
+    </symbol>
+    <symbol id="icon-garantia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <path d="M9 12l2 2 4-4"/>
+    </symbol>
+    <symbol id="icon-urgencia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M12 6v12M6 12h12"/>
+    </symbol>
+    <symbol id="icon-telefono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </symbol>
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+    </symbol>
+    <symbol id="icon-estrella" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    </symbol>
+    <symbol id="icon-calendario" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+      <line x1="16" y1="2" x2="16" y2="6"/>
+      <line x1="8" y1="2" x2="8" y2="6"/>
+      <line x1="3" y1="10" x2="21" y2="10"/>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"/>
+    </symbol>
+    <symbol id="icon-idioma" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <line x1="2" y1="12" x2="22" y2="12"/>
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+    </symbol>
+  </svg>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header>
+    <nav aria-label="Navegación principal">
+      <a href="#hero" class="logo-container" aria-label="Costa Adeje Dental Center - Inicio">
+        <img src="assets/logo_costa_adeje_dental.webp" alt="Logotipo oficial de Costa Adeje Dental Center" class="logo-img">
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#concierge" class="nav-link" data-i18n="nav_concierge">Servicio Concierge</a></li>
+        <li><a href="#smile-design" class="nav-link" data-i18n="nav_smile">Diseño de Sonrisa</a></li>
+        <li><a href="#medicos" class="nav-link" data-i18n="nav_doctors">Dirección Médica</a></li>
+        <li><a href="#tratamientos" class="nav-link" data-i18n="nav_treatments">Tratamientos VIP</a></li>
+        <li><a href="#contacto" class="nav-link" data-i18n="nav_contact">Contacto Privado</a></li>
+      </ul>
+
+      <div class="header-actions">
+        <!-- 4-Language Interactive Switcher (ES, EN, DE, IT) -->
+        <div class="lang-switcher" role="group" aria-label="Selector de idioma">
+          <button type="button" class="lang-btn active" data-lang="ES" aria-label="Cambiar idioma a Español">ES</button>
+          <button type="button" class="lang-btn" data-lang="EN" aria-label="Switch language to English">EN</button>
+          <button type="button" class="lang-btn" data-lang="DE" aria-label="Sprache auf Deutsch umstellen">DE</button>
+          <button type="button" class="lang-btn" data-lang="IT" aria-label="Cambia lingua in Italiano">IT</button>
+        </div>
+
+        <!-- Canonical Clickable Telephony Link -->
+        <a href="tel:+34683101030" class="header-tel-btn" aria-label="Llamar directamente al (+34) 683 10 10 30">
+          <svg class="icon"><use href="#icon-telefono"></use></svg>
+          <span>(+34) 683 10 10 30</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (Single H1 - Ley 8)
+         ========================================================================== -->
+    <section id="hero" class="hero-section" aria-label="Sección Principal">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="badge-champagne">
+              <svg class="icon"><use href="#icon-estrella"></use></svg>
+              <span data-i18n="hero_badge">Boutique Dental Concierge · Tenerife Sur</span>
+            </div>
+
+            <!-- Single H1 Enforcement (Ley 8) -->
+            <h1 data-i18n="hero_title">Boutique Dental Concierge & Estética Avanzada en Costa Adeje</h1>
+
+            <p class="hero-lead" data-i18n="hero_desc">
+              Atención odontológica de alta costura, armonización orofacial y diseño digital de sonrisa en un entorno privado de máxima discreción, confort y excelencia clínica para pacientes locales e internacionales.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="#contacto" class="btn btn-champagne" data-i18n="hero_cta_booking">
+                <svg class="icon"><use href="#icon-calendario"></use></svg>
+                <span>Solicitar Cita Privada</span>
+              </a>
+              <a href="#concierge" class="btn btn-outline-gold" data-i18n="hero_cta_concierge">
+                <svg class="icon"><use href="#icon-transporte"></use></svg>
+                <span>Experiencia Concierge VIP</span>
+              </a>
+            </div>
+
+            <div class="hero-stats">
+              <div>
+                <div class="stat-number">4.9★</div>
+                <div class="stat-label" data-i18n="stat_reviews">Valoración Google TrustIndex de pacientes europeos</div>
+              </div>
+              <div>
+                <div class="stat-number">100%</div>
+                <div class="stat-label" data-i18n="stat_care">Privacidad médica & atención personalizada</div>
+              </div>
+              <div>
+                <div class="stat-number">10 Años</div>
+                <div class="stat-label" data-i18n="stat_warranty">Garantía oficial clínica en rehabilitación oral</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-img-wrap">
+              <img src="assets/hero_boutique_dark.webp" alt="Instalaciones interiores de la clínica boutique Dental Costa Adeje en Tenerife Sur" class="hero-img">
+              <div class="hero-floating-badge">
+                <div class="floating-icon-wrap">
+                  <svg class="icon icon-lg"><use href="#icon-corona"></use></svg>
+                </div>
+                <div>
+                  <div style="font-weight: 600; font-size: 0.95rem; color: var(--text-cream);" data-i18n="floating_badge_title">Atención Multilingüe Personalizada</div>
+                  <div style="font-size: 0.8rem; color: var(--text-dim);" data-i18n="floating_badge_desc">Español · English · Deutsch · Italiano</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         OFFICIAL BRAND PARTNERSHIPS STRIP
+         ========================================================================== -->
+    <section class="partners-section" aria-label="Alianzas tecnológicas y fabricantes certificados">
+      <div class="container">
+        <div class="partners-title" data-i18n="partners_title">Tecnología de Precisión y Marcas Premium Certificadas</div>
+        <div class="partners-grid">
+          <div class="partner-logo-wrap" title="Straumann Dental Implants">
+            <img src="assets/marca_straumann.webp" alt="Certificación oficial Straumann Dental Implants" class="partner-logo-img">
+          </div>
+          <div class="partner-logo-wrap" title="Nobel Biocare Implant Systems">
+            <img src="assets/marca_nobel_biocare.webp" alt="Certificación oficial Nobel Biocare Implant Systems" class="partner-logo-img">
+          </div>
+          <div class="partner-logo-wrap" title="Invisalign Diamond Provider">
+            <img src="assets/marca_invisalign.webp" alt="Acreditación oficial Invisalign Diamond Provider" class="partner-logo-img">
+          </div>
+          <div class="partner-logo-wrap" title="Spark Clear Aligners">
+            <img src="assets/marca_spark.webp" alt="Acreditación oficial Spark Clear Aligners" class="partner-logo-img">
+          </div>
+          <div class="partner-logo-wrap" title="Ticare Dental Implants">
+            <img src="assets/marca_ticare.webp" alt="Acreditación oficial Ticare Dental Implants" class="partner-logo-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         INTERACTIVE BEFORE / AFTER SMILE SLIDER
+         ========================================================================== -->
+    <section id="smile-design" class="section-spacing smile-section" aria-label="Casos de Éxito Antes y Después">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="badge-champagne">
+            <svg class="icon"><use href="#icon-sonrisa"></use></svg>
+            <span data-i18n="smile_badge">Simulación y Casos Clínicos Reales</span>
+          </div>
+          <h2 data-i18n="smile_title">Resultados Fotorrealistas: El Arte del Diseño de Sonrisa</h2>
+          <p data-i18n="smile_desc">
+            Deslice el separador interactivo para comprobar la transformación integral lograda mediante carillas ultrafinas de porcelana E-Max y armonización estética de mínima invasión.
+          </p>
+        </div>
+
+        <div class="glass-card slider-card">
+          <!-- Draggable Split-Screen Comparison Slider Widget -->
+          <div class="smile-comparison-slider" id="comparison-slider" style="--slider-pos: 50%;">
+            <!-- After Image (Full background) -->
+            <img src="assets/smile_after.webp" alt="Resultado radiante de diseño de sonrisa con carillas de porcelana tras el tratamiento en Costa Adeje Dental" class="slider-img slider-img-after">
+
+            <!-- Before Image (Clipped overlay) -->
+            <div class="slider-img-before-wrap" id="slider-before-wrap">
+              <img src="assets/smile_before.webp" alt="Estado inicial de sonrisa con desgaste y desalineación antes del tratamiento estético dental" class="slider-img">
+            </div>
+
+            <!-- Glowing Divider Line -->
+            <div class="slider-divider-line" id="slider-divider"></div>
+
+            <!-- Draggable Gold Handle -->
+            <div class="slider-handle" id="slider-handle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/>
+              </svg>
+            </div>
+
+            <!-- Floating Badges -->
+            <div class="slider-label slider-label-before" data-i18n="slider_label_before">Antes: Desgaste & Asimetría</div>
+            <div class="slider-label slider-label-after" data-i18n="slider_label_after">Después: Carillas E-Max & Armonía</div>
+
+            <!-- Range input for keyboard / screen reader accessibility -->
+            <input type="range" class="slider-range" id="slider-range-input" min="0" max="100" value="50" aria-label="Comparador interactivo de sonrisa antes y después">
+          </div>
+
+          <div class="slider-meta-grid">
+            <div class="slider-meta-item">
+              <div class="slider-meta-icon"><svg class="icon"><use href="#icon-check"></use></svg></div>
+              <div>
+                <div class="slider-meta-title" data-i18n="slider_meta_1_title">Planificación Digital DSD</div>
+                <p class="slider-meta-desc" data-i18n="slider_meta_1_desc">Escaneado intraoral 3D de máxima resolución sin pastas incómodas.</p>
+              </div>
+            </div>
+            <div class="slider-meta-item">
+              <div class="slider-meta-icon"><svg class="icon"><use href="#icon-check"></use></svg></div>
+              <div>
+                <div class="slider-meta-title" data-i18n="slider_meta_2_title">Carillas Ultrafinas E-Max</div>
+                <p class="slider-meta-desc" data-i18n="slider_meta_2_desc">Cerámica de disilicato de litio con tonalidad biocompatible y textura natural.</p>
+              </div>
+            </div>
+            <div class="slider-meta-item">
+              <div class="slider-meta-icon"><svg class="icon"><use href="#icon-check"></use></svg></div>
+              <div>
+                <div class="slider-meta-title" data-i18n="slider_meta_3_title">Tratamiento en Pocas Citas</div>
+                <p class="slider-meta-desc" data-i18n="slider_meta_3_desc">Optimizado para residentes y pacientes en estancias vacacionales en Tenerife.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         VIP CONCIERGE & PRIVATE TRANSFER
+         ========================================================================== -->
+    <section id="concierge" class="section-spacing concierge-section" aria-label="Experiencia VIP Concierge">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="badge-champagne">
+            <svg class="icon"><use href="#icon-transporte"></use></svg>
+            <span data-i18n="concierge_badge">Turismo Dental de Lujo en Costa Adeje</span>
+          </div>
+          <h2 data-i18n="concierge_title">Servicio Concierge: Hospitalidad Exclusiva de Principio a Fin</h2>
+          <p data-i18n="concierge_desc">
+            Diseñamos una experiencia sin estrés para pacientes que valoran su tiempo, comodidad y privacidad absoluta en el sur de Tenerife.
+          </p>
+        </div>
+
+        <div class="glass-card concierge-img-card">
+          <div>
+            <div class="badge-champagne" style="margin-bottom: 0.8rem;">
+              <svg class="icon"><use href="#icon-transporte"></use></svg>
+              <span data-i18n="shuttle_badge">Traslado Puerta a Puerta</span>
+            </div>
+            <h3 data-i18n="shuttle_title">Furgoneta VIP Privada y Asistencia en Hotel</h3>
+            <p data-i18n="shuttle_desc">
+              Ponemos a su disposición nuestro servicio de recogida privada en Mercedes VIP desde el Aeropuerto de Tenerife Sur (TFS) o directamente desde los principales resorts 5 estrellas de la zona (Bahía del Duque, The Ritz-Carlton Abama, Royal Hideaway Corales).
+            </p>
+            <ul class="service-features-list">
+              <li class="service-feature-item">
+                <svg class="icon"><use href="#icon-check"></use></svg>
+                <span data-i18n="shuttle_feat_1">Traslados puntuales directos a la clínica para consultas y tratamientos</span>
+              </li>
+              <li class="service-feature-item">
+                <svg class="icon"><use href="#icon-check"></use></svg>
+                <span data-i18n="shuttle_feat_2">Vehículo premium climatizado con chofer privado discreto</span>
+              </li>
+              <li class="service-feature-item">
+                <svg class="icon"><use href="#icon-check"></use></svg>
+                <span data-i18n="shuttle_feat_3">Servicio de cortesía gratuito coordinado por su asistente personal</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <img src="assets/transporte_vip_shuttle.webp" alt="Furgoneta de transporte privado VIP Mercedes para pacientes de Costa Adeje Dental Center" class="concierge-hero-img">
+          </div>
+        </div>
+
+        <div class="concierge-grid">
+          <div class="glass-card">
+            <div class="concierge-feature-icon">
+              <svg class="icon icon-lg"><use href="#icon-idioma"></use></svg>
+            </div>
+            <h3 data-i18n="concierge_card1_title">Coordinador Bilingüe Dedicado</h3>
+            <p data-i18n="concierge_card1_desc">
+              Un asistente personal nativo gestionará cada etapa de su plan de tratamiento en español, inglés, alemán o italiano, organizando citas, informes médicos y consultas telefónicas directas.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <div class="concierge-feature-icon">
+              <svg class="icon icon-lg"><use href="#icon-sedacion"></use></svg>
+            </div>
+            <h3 data-i18n="concierge_card2_title">Lounge Privado de Recuperación</h3>
+            <p data-i18n="concierge_card2_desc">
+              Instalaciones diseñadas bajo estándares de confidencialidad hotelera de 5 estrellas, con sala de espera privada, aromaterapia relajante y monitorización continua tras cualquier intervención.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <div class="concierge-feature-icon">
+              <svg class="icon icon-lg"><use href="#icon-garantia"></use></svg>
+            </div>
+            <h3 data-i18n="concierge_card3_title">Garantía Internacional 10 Años</h3>
+            <p data-i18n="concierge_card3_desc">
+              Entregamos pasaporte de implantes con número de lote oficial Straumann y certificación de laboratorio en cerámica E-Max, garantizando soporte clínico en su país de residencia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MEDICAL AUTHORITY & E-E-A-T MODULE
+         ========================================================================== -->
+    <section id="medicos" class="section-spacing doctor-section" aria-label="Dirección Médica y Equipo Clínico">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="badge-champagne">
+            <svg class="icon"><use href="#icon-garantia"></use></svg>
+            <span data-i18n="doctors_badge">Excelencia Clínica y Colegiación Oficial</span>
+          </div>
+          <h2 data-i18n="doctors_title">Dirección Médica y Acreditación Profesional</h2>
+          <p data-i18n="doctors_desc">
+            Cada tratamiento es planificado y ejecutado por especialistas universitarios colegiados oficialmente en el Ilustre Colegio Oficial de Dentistas de Santa Cruz de Tenerife (COEST).
+          </p>
+        </div>
+
+        <div class="doctors-grid">
+          <!-- Dra. Ana Isabel Martín Fuster (Directora Médica) -->
+          <div class="glass-card doctor-card">
+            <div class="doctor-photo-wrap">
+              <img src="assets/clinica_doctora_consulta.webp" alt="Dra. Ana Isabel Martín Fuster, Directora Médica de Costa Adeje Dental Center" class="doctor-photo">
+              <div class="doctor-badge-floating">Directora Médica</div>
+            </div>
+            <div class="doctor-info">
+              <h3 class="doctor-name">Dra. Ana Isabel Martín Fuster</h3>
+              <div class="doctor-role" data-i18n="doc1_role">Directora Médica · Especialista en Estética Dental y Rehabilitación Oral</div>
+              <div class="doctor-colegiate">
+                <svg class="icon" style="width:14px;height:14px;"><use href="#icon-check"></use></svg>
+                <span>Colegiada Oficial COEST Nº 38000742</span>
+              </div>
+              <p style="font-size: 0.92rem; margin-bottom: 0;" data-i18n="doc1_desc">
+                Más de 18 años de trayectoria perfeccionando técnicas de armonización orofacial, micro-carillas de porcelana y diseño digital de sonrisa con enfoque mínimamente invasivo.
+              </p>
+            </div>
+          </div>
+
+          <!-- Dr. Facundo Mateo Ríos (Director Quirúrgico) -->
+          <div class="glass-card doctor-card">
+            <div class="doctor-photo-wrap">
+              <img src="assets/doctor_facundo_mateo.webp" alt="Dr. Facundo Mateo Ríos, Director Quirúrgico de Costa Adeje Dental Center" class="doctor-photo">
+              <div class="doctor-badge-floating">Cirugía e Implantes</div>
+            </div>
+            <div class="doctor-info">
+              <h3 class="doctor-name">Dr. Facundo Mateo Ríos</h3>
+              <div class="doctor-role" data-i18n="doc2_role">Director Quirúrgico · Implantología Guiada 3D y Cirugía Oral</div>
+              <div class="doctor-colegiate">
+                <svg class="icon" style="width:14px;height:14px;"><use href="#icon-check"></use></svg>
+                <span>Colegiado Oficial COEST Nº 38000921</span>
+              </div>
+              <p style="font-size: 0.92rem; margin-bottom: 0;" data-i18n="doc2_desc">
+                Especialista certificado Straumann en carga inmediata, regeneración ósea avanzada y rehabilitación de arcadas completas con dientes fijos en 24 horas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Dra. Maryuri de Castro (Ortodoncia Avanzada) -->
+          <div class="glass-card doctor-card">
+            <div class="doctor-photo-wrap">
+              <img src="assets/doctora_maryuri_castro.webp" alt="Dra. Maryuri de Castro, Especialista en Ortodoncia Invisible de Costa Adeje Dental Center" class="doctor-photo">
+              <div class="doctor-badge-floating">Ortodoncia Digital</div>
+            </div>
+            <div class="doctor-info">
+              <h3 class="doctor-name">Dra. Maryuri de Castro</h3>
+              <div class="doctor-role" data-i18n="doc3_role">Especialista en Ortodoncia Invisible Invisalign & Spark</div>
+              <div class="doctor-colegiate">
+                <svg class="icon" style="width:14px;height:14px;"><use href="#icon-check"></use></svg>
+                <span>Colegiada Oficial COEST Nº 38000855</span>
+              </div>
+              <p style="font-size: 0.92rem; margin-bottom: 0;" data-i18n="doc3_desc">
+                Experta en alineación dental transparente para adultos, oclusión funcional y estética orofacial combinada sin necesidad de brackets visibles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TREATMENTS & PRIVATE SERVICES
+         ========================================================================== -->
+    <section id="tratamientos" class="section-spacing" style="background: #0B0F19;" aria-label="Tratamientos y Servicios Boutique">
+      <div class="container">
+        <div class="section-header-center">
+          <div class="badge-champagne">
+            <svg class="icon"><use href="#icon-diente"></use></svg>
+            <span data-i18n="treatments_badge">Protocolos Odontológicos de Vanguardia</span>
+          </div>
+          <h2 data-i18n="treatments_title">Tratamientos Exclusivos de Alta Precisión</h2>
+          <p data-i18n="treatments_desc">
+            Tecnología diagnóstica tridimensional combinada con materiales biocompatibles de la más alta exigencia suiza y alemana.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Servicio 1: Carillas E-Max -->
+          <div class="glass-card service-card">
+            <div class="service-top">
+              <div class="service-icon-box">
+                <svg class="icon icon-lg"><use href="#icon-corona"></use></svg>
+              </div>
+              <h3 data-i18n="serv1_title">Carillas de Cerámica E-Max (Zero-Prep)</h3>
+              <p data-i18n="serv1_desc">Láminas de porcelana ultrafina de 0.3 mm confeccionadas a medida para corregir color, forma y alineación preservando la estructura dental natural.</p>
+              <ul class="service-features-list">
+                <li class="service-feature-item">
+                  <svg class="icon"><use href="#icon-check"></use></svg>
+                  <span data-i18n="serv1_f1">Diseño digital guiado por proporciones faciales</span>
+                </li>
+                <li class="service-feature-item">
+                  <svg class="icon"><use href="#icon-check"></use></svg>
+                  <span data-i18n="serv1_f2">Máxima translucidez con resistencia probada</span>
+                </li>
+                <li class="service-feature-item">
+                  <svg class="icon"><use href="#icon-check"></use></svg>
+                  <span data-i18n="serv1_f3">Prueba estética previa (mock-up en boca) sin compromiso</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#contacto" class="btn btn-outline-gold" style="align-self: flex-start;" data-i18n="btn_consult">Consultar Caso</a>
+          </div>
+
+          <!-- Servicio 2: Implantes Straumann -->
+          <div class="glass-card service-card">
+            <div class="service-top">
+              <div class="service-icon-box">
+                <svg class="icon icon-lg"><use href="#icon-implante"></use></svg>
+              </div>
+              <h3 data-i18n="serv2_title">Implantología Quirúrgica Guiada Straumann</h3>
+              <p data-i18n="serv2_desc">Colocación milimétrica guiada por TAC 3D CBCT y software digital, permitiendo fijar prótesis estéticas provisionales en el mismo día de la cirugía.</p>
+              <ul class="service-features-list">
+                <li class="service-feature-item">
+                  <svg class="icon"><use href="#icon-check"></use></svg>
+                  <span data-i18n="serv2_f1">Carga inmediata: dientes fijos en 24 horas</span>
+                </li>
+                <li class="service-feature-item">
+                  <svg class="icon"><use href="#icon-check"></use></svg>
+                  <span data-i18n="serv2_f2">Titanio Roxolid® y superficie bioactiva SLActive®</span>
+                </li>
+                <li class="service-feature-item">
+                  <svg class="icon"><use href="#icon-check"></use></svg>
+                  <span data-i18n="serv2_f3">Cirugía mínimamente invasiva sin apenas dolor postoperatorio</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#contacto" class="btn btn-outline-gold" style="align-self: flex-start;" data-i18n="btn_consult">Consultar Caso</a>
+          </div>
+
+          <!-- Servicio 3: Ortodoncia Invisible -->
+          <div class="glass-card service-card">
+            <div class="service-top">
+              <div class="service-icon-box">
+                <svg class="icon icon-lg"><use href="#icon-ortodoncia"></use></svg>
+              </div>
+              <h3 data-i18n="serv3_title">Ortodoncia Invisible Invisalign Diamond</h3>
+              <p data-i18n="serv3_desc">Alineadores transparentes extraíbles fabricados con polímeros SmartTrack® de última generación para una corrección discreta y cómoda.</p>
+              <ul class="service-features-list">
+                <li class="service-feature-item">
+                  <svg class="icon"><use href="#icon-check"></use></svg>
+                  <span data-i18n="serv3_f1">Simulación 3D ClinCheck® del resultado antes de comenzar</span>
+                </li>
+                <li class="service-feature-item">
+                  <svg class="icon"><use href="#icon-check"></use></svg>
+                  <span data-i18n="serv3_f2">100% invisible en interacciones sociales y de trabajo</span>
+                </li>
+                <li class="service-feature-item">
+                  <svg class="icon"><use href="#icon-check"></use></svg>
+                  <span data-i18n="serv3_f3">Revisiones espaciadas compatibles con viajes</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#contacto" class="btn btn-outline-gold" style="align-self: flex-start;" data-i18n="btn_consult">Consultar Caso</a>
+          </div>
+
+          <!-- Servicio 4: Sedación Consciente -->
+          <div class="glass-card service-card">
+            <div class="service-top">
+              <div class="service-icon-box">
+                <svg class="icon icon-lg"><use href="#icon-sedacion"></use></svg>
+              </div>
+              <h3 data-i18n="serv4_title">Sedación Consciente Odontológica</h3>
+              <p data-i18n="serv4_desc">Asistencia anestesiológica especializada para pacientes con ansiedad, odontofobia o intervenciones complejas en una sola sesión tranquila.</p>
+              <ul class="service-features-list">
+                <li class="service-feature-item">
+                  <svg class="icon"><use href="#icon-check"></use></svg>
+                  <span data-i18n="serv4_f1">Relajación absoluta sin dolor ni percepción del tiempo</span>
+                </li>
+                <li class="service-feature-item">
+                  <svg class="icon"><use href="#icon-check"></use></svg>
+                  <span data-i18n="serv4_f2">Monitorización médica continúa por médico anestesista</span>
+                </li>
+                <li class="service-feature-item">
+                  <svg class="icon"><use href="#icon-check"></use></svg>
+                  <span data-i18n="serv4_f3">Alta inmediata y traslado cómodo a su hotel o residencia</span>
+                </li>
+              </ul>
+            </div>
+            <a href="#contacto" class="btn btn-outline-gold" style="align-self: flex-start;" data-i18n="btn_consult">Consultar Caso</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & PRIVATE BOOKING SUITE
+         ========================================================================== -->
+    <section id="contacto" class="section-spacing contact-section" aria-label="Contacto y Reserva Privada">
+      <div class="container">
+        <div class="contact-grid">
+          <div>
+            <div class="badge-champagne">
+              <svg class="icon"><use href="#icon-telefono"></use></svg>
+              <span data-i18n="contact_badge">Atención Telefónica Directa</span>
+            </div>
+            <h2 data-i18n="contact_title">Concierte su Cita Privada en Costa Adeje</h2>
+            <p data-i18n="contact_desc">
+              Nuestro coordinador de pacientes le responderá de forma personalizada para organizar su valoración inicial, estudio radiológico 3D y traslado privado si lo requiere.
+            </p>
+
+            <ul class="contact-info-list">
+              <li class="contact-info-item">
+                <div class="contact-icon-wrap">
+                  <svg class="icon"><use href="#icon-telefono"></use></svg>
+                </div>
+                <div>
+                  <div class="contact-item-title" data-i18n="contact_lbl_phone">Línea Telefónica Directa</div>
+                  <a href="tel:+34683101030" class="contact-item-val">(+34) 683 10 10 30</a>
+                </div>
+              </li>
+              <li class="contact-info-item">
+                <div class="contact-icon-wrap">
+                  <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+                </div>
+                <div>
+                  <div class="contact-item-title" data-i18n="contact_lbl_wa">Canal WhatsApp VIP</div>
+                  <a href="https://wa.me/34683101030?text=Hola%20Costa%20Adeje%20Dental%20Center%2C%20deseo%20solicitar%20cita%20de%20valoraci%C3%B3n%20concierge." target="_blank" rel="noopener noreferrer" class="contact-item-val">(+34) 683 10 10 30 (Atención 4 Idiomas)</a>
+                </div>
+              </li>
+              <li class="contact-info-item">
+                <div class="contact-icon-wrap">
+                  <svg class="icon"><use href="#icon-calendario"></use></svg>
+                </div>
+                <div>
+                  <div class="contact-item-title" data-i18n="contact_lbl_schedule">Horario de Consulta</div>
+                  <div class="contact-item-val" data-i18n="contact_val_schedule">Lunes a Viernes: 08:30 – 19:30 (Verano: 08:30 – 16:30)</div>
+                </div>
+              </li>
+              <li class="contact-info-item">
+                <div class="contact-icon-wrap">
+                  <svg class="icon"><use href="#icon-diente"></use></svg>
+                </div>
+                <div>
+                  <div class="contact-item-title" data-i18n="contact_lbl_location">Ubicación de la Clínica</div>
+                  <div class="contact-item-val">Av. Kurt Konrad Mayer, 35 Edificio Karma, local 3 y 4 · 38660 Costa Adeje, Tenerife</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="booking-box">
+            <h3 style="margin-bottom: 0.5rem;" data-i18n="form_title">Solicitud de Valoración Exclusiva</h3>
+            <p style="font-size: 0.92rem; margin-bottom: 1.5rem;" data-i18n="form_subtitle">Complete este formulario confidencial y nuestro coordinador le contactará en menos de 2 horas hábiles.</p>
+
+            <form id="boutique-booking-form" onsubmit="event.preventDefault(); handleBoutiqueBooking();">
+              <div class="form-group">
+                <label for="client-name" class="form-label" data-i18n="form_lbl_name">Nombre completo</label>
+                <input type="text" id="client-name" class="form-input" placeholder="Ej. Alexander von Berg" required>
+              </div>
+
+              <div class="form-group">
+                <label for="client-phone" class="form-label" data-i18n="form_lbl_phone">Teléfono / WhatsApp de contacto</label>
+                <input type="tel" id="client-phone" class="form-input" placeholder="+34 683 10 10 30" required>
+              </div>
+
+              <div class="form-group">
+                <label for="treatment-select" class="form-label" data-i18n="form_lbl_service">Tratamiento de interés</label>
+                <select id="treatment-select" class="form-select">
+                  <option value="diseno-sonrisa">Diseño Digital de Sonrisa & Carillas E-Max</option>
+                  <option value="implantes">Implantes Dentales Guiados Straumann</option>
+                  <option value="ortodoncia">Ortodoncia Invisible Invisalign / Spark</option>
+                  <option value="rehabilitacion">Rehabilitación Completa & Sedación</option>
+                  <option value="urgencia">Urgencia Dental / Segunda Opinión VIP</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="client-notes" class="form-label" data-i18n="form_lbl_notes">Detalles o necesidades de transporte (Opcional)</label>
+                <input type="text" id="client-notes" class="form-input" placeholder="Ej. Me hospedo en Costa Adeje y requiero traslado">
+              </div>
+
+              <button type="submit" class="btn btn-champagne" style="width: 100%; margin-top: 0.8rem;" data-i18n="form_btn_submit">
+                <svg class="icon"><use href="#icon-calendario"></use></svg>
+                <span>Confirmar Solicitud de Cita</span>
+              </button>
+            </form>
+            <div id="booking-confirmation" class="booking-confirm-box">
+              ✓ Solicitud recibida. Un coordinador concierge se comunicará con usted de inmediato.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="assets/logo_costa_adeje_dental.webp" alt="Logotipo Costa Adeje Dental Center" style="height: 34px; margin-bottom: 1.2rem;">
+          <p style="font-size: 0.9rem; line-height: 1.6em; margin-bottom: 1rem;">
+            Costa Adeje Dental Center · Centro de referencia en estética dental, implantología guiada 3D y odontología de alta gama en Tenerife Sur.
+          </p>
+          <div style="font-size: 0.85rem; color: var(--champagne-gold); font-weight: 500;">
+            Directora Médica: Dra. Ana Isabel Martín Fuster (Colegiada Oficial COEST 38000742)
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-col-title" data-i18n="footer_col_treatments">Especialidades</div>
+          <ul class="footer-links">
+            <li><a href="#smile-design">Diseño de Sonrisa DSD</a></li>
+            <li><a href="#tratamientos">Carillas de Porcelana E-Max</a></li>
+            <li><a href="#tratamientos">Implantes Dentales Straumann</a></li>
+            <li><a href="#tratamientos">Ortodoncia Invisible Invisalign</a></li>
+            <li><a href="#tratamientos">Sedación Consciente Monitorizada</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title" data-i18n="footer_col_concierge">Servicio Concierge</div>
+          <ul class="footer-links">
+            <li><a href="#concierge">Recogida VIP en Hotel / TFS</a></li>
+            <li><a href="#concierge">Asistencia en 4 Idiomas</a></li>
+            <li><a href="#concierge">Lounge Privado de Recuperación</a></li>
+            <li><a href="#concierge">Garantía Clínica Internacional</a></li>
+            <li><a href="#contacto">Atención Urgente Preferente</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title" data-i18n="footer_col_legal">Información y Citas</div>
+          <p style="font-size: 0.88rem; margin-bottom: 0.6rem;">
+            <a href="tel:+34683101030" style="color: var(--champagne-gold); font-weight: 600;">Tel: (+34) 683 10 10 30</a>
+          </p>
+          <p style="font-size: 0.85rem; margin-bottom: 0.6rem;">info@dentalcostaadeje.com</p>
+          <p style="font-size: 0.82rem; color: var(--text-dim);">Av. Kurt Konrad Mayer 35, Edif. Karma, local 3 y 4, 38660 Costa Adeje</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Costa Adeje Dental Center. Todos los derechos reservados. Rediseño Propuesta 2 Boutique Concierge.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#" style="color: var(--text-dim); font-size: 0.85rem;">Aviso Legal</a>
+          <a href="#" style="color: var(--text-dim); font-size: 0.85rem;">Política de Privacidad</a>
+          <a href="#" style="color: var(--text-dim); font-size: 0.85rem;">Acreditaciones COEST</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       RADAR WHATSAPP BUTTON (DESKTOP & MOBILE)
+       ========================================================================== -->
+  <a href="https://wa.me/34683101030?text=Hola%20Costa%20Adeje%20Dental%20Center%2C%20deseo%20solicitar%20informaci%C3%B3n%20para%20un%20dise%C3%B1o%20de%20sonrisa%20y%20servicio%20concierge." 
+     class="radar-wa-btn" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Abrir conversación de WhatsApp con Costa Adeje Dental Center">
+    <svg class="icon icon-lg" style="stroke: #FFFFFF; fill: none;"><use href="#icon-whatsapp"></use></svg>
+  </a>
+
+  <!-- ==========================================================================
+       STICKY MOBILE ACTION BAR (<= 768px)
+       ========================================================================== -->
+  <div class="sticky-mobile-bar" aria-label="Acciones rápidas móviles">
+    <a href="tel:+34683101030" class="mobile-bar-btn mobile-bar-btn-tel" aria-label="Llamar al (+34) 683 10 10 30">
+      <svg class="icon"><use href="#icon-telefono"></use></svg>
+      <span>Llamar Ahora</span>
+    </a>
+    <a href="https://wa.me/34683101030?text=Hola%20Costa%20Adeje%20Dental%20Center%2C%20deseo%20solicitar%20cita%20concierge." 
+       class="mobile-bar-btn mobile-bar-btn-wa" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="WhatsApp directo con Costa Adeje Dental Center">
+      <svg class="icon"><use href="#icon-whatsapp"></use></svg>
+      <span>WhatsApp VIP</span>
+    </a>
+  </div>
+
+  <!-- ==========================================================================
+       INTERACTIVE JAVASCRIPT: SLIDER & MULTILINGUAL SWITCHER
+       ========================================================================== -->
+  <script>
+    /* --------------------------------------------------------------------------
+       1. Multilingual Content Matrix (ES, EN, DE, IT)
+       -------------------------------------------------------------------------- */
+    const translations = {
+      ES: {
+        nav_concierge: "Servicio Concierge",
+        nav_smile: "Diseño de Sonrisa",
+        nav_doctors: "Dirección Médica",
+        nav_treatments: "Tratamientos VIP",
+        nav_contact: "Contacto Privado",
+        hero_badge: "Boutique Dental Concierge · Tenerife Sur",
+        hero_title: "Boutique Dental Concierge & Estética Avanzada en Costa Adeje",
+        hero_desc: "Atención odontológica de alta costura, armonización orofacial y diseño digital de sonrisa en un entorno privado de máxima discreción, confort y excelencia clínica para pacientes locales e internacionales.",
+        hero_cta_booking: "Solicitar Cita Privada",
+        hero_cta_concierge: "Experiencia Concierge VIP",
+        stat_reviews: "Valoración Google TrustIndex de pacientes europeos",
+        stat_care: "Privacidad médica & atención personalizada",
+        stat_warranty: "Garantía oficial clínica en rehabilitación oral",
+        floating_badge_title: "Atención Multilingüe Personalizada",
+        floating_badge_desc: "Español · English · Deutsch · Italiano",
+        partners_title: "Tecnología de Precisión y Marcas Premium Certificadas",
+        smile_badge: "Simulación y Casos Clínicos Reales",
+        smile_title: "Resultados Fotorrealistas: El Arte del Diseño de Sonrisa",
+        smile_desc: "Deslice el separador interactivo para comprobar la transformación integral lograda mediante carillas ultrafinas de porcelana E-Max y armonización estética de mínima invasión.",
+        slider_label_before: "Antes: Desgaste & Asimetría",
+        slider_label_after: "Después: Carillas E-Max & Armonía",
+        slider_meta_1_title: "Planificación Digital DSD",
+        slider_meta_1_desc: "Escaneado intraoral 3D de máxima resolución sin pastas incómodas.",
+        slider_meta_2_title: "Carillas Ultrafinas E-Max",
+        slider_meta_2_desc: "Cerámica de disilicato de litio con tonalidad biocompatible y textura natural.",
+        slider_meta_3_title: "Tratamiento en Pocas Citas",
+        slider_meta_3_desc: "Optimizado para residentes y pacientes en estancias vacacionales en Tenerife.",
+        concierge_badge: "Turismo Dental de Lujo en Costa Adeje",
+        concierge_title: "Servicio Concierge: Hospitalidad Exclusiva de Principio a Fin",
+        concierge_desc: "Diseñamos una experiencia sin estrés para pacientes que valoran su tiempo, comodidad y privacidad absoluta en el sur de Tenerife.",
+        shuttle_badge: "Traslado Puerta a Puerta",
+        shuttle_title: "Furgoneta VIP Privada y Asistencia en Hotel",
+        shuttle_desc: "Ponemos a su disposición nuestro servicio de recogida privada en Mercedes VIP desde el Aeropuerto de Tenerife Sur (TFS) o directamente desde los principales resorts 5 estrellas de la zona (Bahía del Duque, The Ritz-Carlton Abama, Royal Hideaway Corales).",
+        shuttle_feat_1: "Traslados puntuales directos a la clínica para consultas y tratamientos",
+        shuttle_feat_2: "Vehículo premium climatizado con chofer privado discreto",
+        shuttle_feat_3: "Servicio de cortesía gratuito coordinado por su asistente personal",
+        concierge_card1_title: "Coordinador Bilingüe Dedicado",
+        concierge_card1_desc: "Un asistente personal nativo gestionará cada etapa de su plan de tratamiento en español, inglés, alemán o italiano, organizando citas, informes médicos y consultas telefónicas directas.",
+        concierge_card2_title: "Lounge Privado de Recuperación",
+        concierge_card2_desc: "Instalaciones diseñadas bajo estándares de confidencialidad hotelera de 5 estrellas, con sala de espera privada, aromaterapia relajante y monitorización continua tras cualquier intervención.",
+        concierge_card3_title: "Garantía Internacional 10 Años",
+        concierge_card3_desc: "Entregamos pasaporte de implantes con número de lote oficial Straumann y certificación de laboratorio en cerámica E-Max, garantizando soporte clínico en su país de residencia.",
+        doctors_badge: "Excelencia Clínica y Colegiación Oficial",
+        doctors_title: "Dirección Médica y Acreditación Profesional",
+        doctors_desc: "Cada tratamiento es planificado y ejecutado por especialistas universitarios colegiados oficialmente en el Ilustre Colegio Oficial de Dentistas de Santa Cruz de Tenerife (COEST).",
+        doc1_role: "Directora Médica · Especialista en Estética Dental y Rehabilitación Oral",
+        doc1_desc: "Más de 18 años de trayectoria perfeccionando técnicas de armonización orofacial, micro-carillas de porcelana y diseño digital de sonrisa con enfoque mínimamente invasivo.",
+        doc2_role: "Director Quirúrgico · Implantología Guiada 3D y Cirugía Oral",
+        doc2_desc: "Especialista certificado Straumann en carga inmediata, regeneración ósea avanzada y rehabilitación de arcadas completas con dientes fijos en 24 horas.",
+        doc3_role: "Especialista en Ortodoncia Invisible Invisalign & Spark",
+        doc3_desc: "Experta en alineación dental transparente para adultos, oclusión funcional y estética orofacial combinada sin necesidad de brackets visibles.",
+        treatments_badge: "Protocolos Odontológicos de Vanguardia",
+        treatments_title: "Tratamientos Exclusivos de Alta Precisión",
+        treatments_desc: "Tecnología diagnóstica tridimensional combinada con materiales biocompatibles de la más alta exigencia suiza y alemana.",
+        serv1_title: "Carillas de Cerámica E-Max (Zero-Prep)",
+        serv1_desc: "Láminas de porcelana ultrafina de 0.3 mm confeccionadas a medida para corregir color, forma y alineación preservando la estructura dental natural.",
+        serv1_f1: "Diseño digital guiado por proporciones faciales",
+        serv1_f2: "Máxima translucidez con resistencia probada",
+        serv1_f3: "Prueba estética previa (mock-up en boca) sin compromiso",
+        serv2_title: "Implantología Quirúrgica Guiada Straumann",
+        serv2_desc: "Colocación milimétrica guiada por TAC 3D CBCT y software digital, permitiendo fijar prótesis estéticas provisionales en el mismo día de la cirugía.",
+        serv2_f1: "Carga inmediata: dientes fijos en 24 horas",
+        serv2_f2: "Titanio Roxolid® y superficie bioactiva SLActive®",
+        serv2_f3: "Cirugía mínimamente invasiva sin apenas dolor postoperatorio",
+        serv3_title: "Ortodoncia Invisible Invisalign Diamond",
+        serv3_desc: "Alineadores transparentes extraíbles fabricados con polímeros SmartTrack® de última generación para una corrección discreta y cómoda.",
+        serv3_f1: "Simulación 3D ClinCheck® del resultado antes de comenzar",
+        serv3_f2: "100% invisible en interacciones sociales y de trabajo",
+        serv3_f3: "Revisiones espaciadas compatibles con viajes",
+        serv4_title: "Sedación Consciente Odontológica",
+        serv4_desc: "Asistencia anestesiológica especializada para pacientes con ansiedad, odontofobia o intervenciones complejas en una sola sesión tranquila.",
+        serv4_f1: "Relajación absoluta sin dolor ni percepción del tiempo",
+        serv4_f2: "Monitorización médica continúa por médico anestesista",
+        serv4_f3: "Alta inmediata y traslado cómodo a su hotel o residencia",
+        btn_consult: "Consultar Caso",
+        contact_badge: "Atención Telefónica Directa",
+        contact_title: "Concierte su Cita Privada en Costa Adeje",
+        contact_desc: "Nuestro coordinador de pacientes le responderá de forma personalizada para organizar su valoración inicial, estudio radiológico 3D y traslado privado si lo requiere.",
+        contact_lbl_phone: "Línea Telefónica Directa",
+        contact_lbl_wa: "Canal WhatsApp VIP",
+        contact_lbl_schedule: "Horario de Consulta",
+        contact_val_schedule: "Lunes a Viernes: 08:30 – 19:30 (Verano: 08:30 – 16:30)",
+        contact_lbl_location: "Ubicación de la Clínica",
+        form_title: "Solicitud de Valoración Exclusiva",
+        form_subtitle: "Complete este formulario confidencial y nuestro coordinador le contactará en menos de 2 horas hábiles.",
+        form_lbl_name: "Nombre completo",
+        form_lbl_phone: "Teléfono / WhatsApp de contacto",
+        form_lbl_service: "Tratamiento de interés",
+        form_lbl_notes: "Detalles o necesidades de transporte (Opcional)",
+        form_btn_submit: "Confirmar Solicitud de Cita",
+        footer_col_treatments: "Especialidades",
+        footer_col_concierge: "Servicio Concierge",
+        footer_col_legal: "Información y Citas"
+      },
+      EN: {
+        nav_concierge: "Concierge Service",
+        nav_smile: "Smile Design",
+        nav_doctors: "Medical Team",
+        nav_treatments: "VIP Treatments",
+        nav_contact: "Private Contact",
+        hero_badge: "Boutique Dental Concierge · South Tenerife",
+        hero_title: "Boutique Dental Concierge & Advanced Aesthetics in Costa Adeje",
+        hero_desc: "Haute-couture dentistry, orofacial harmonization, and digital smile design in a private environment of ultimate discretion, comfort, and clinical excellence for discerning international patients.",
+        hero_cta_booking: "Request Private Consultation",
+        hero_cta_concierge: "VIP Concierge Experience",
+        stat_reviews: "Google TrustIndex rating from European patients",
+        stat_care: "Medical privacy & dedicated personal care",
+        stat_warranty: "Official 10-year clinic warranty on oral rehabilitation",
+        floating_badge_title: "Dedicated Multilingual Care",
+        floating_badge_desc: "English · Español · Deutsch · Italiano",
+        partners_title: "Certified Precision Technology & Premium Brands",
+        smile_badge: "Simulation & Real Clinical Cases",
+        smile_title: "Photorealistic Results: The Art of Smile Design",
+        smile_desc: "Drag the interactive comparison divider to experience the comprehensive transformation achieved through ultra-thin E-Max porcelain veneers and minimally invasive aesthetics.",
+        slider_label_before: "Before: Wear & Misalignment",
+        slider_label_after: "After: E-Max Veneers & Harmony",
+        slider_meta_1_title: "Digital Smile Design (DSD)",
+        slider_meta_1_desc: "Ultra-accurate 3D intraoral scanning without messy impression trays.",
+        slider_meta_2_title: "Ultra-Thin E-Max Veneers",
+        slider_meta_2_desc: "Biocompatible lithium disilicate ceramic with natural micro-texture.",
+        slider_meta_3_title: "Completed in Few Visits",
+        slider_meta_3_desc: "Streamlined protocols ideal for holidaymakers and residents in Tenerife.",
+        concierge_badge: "Luxury Dental Tourism in Costa Adeje",
+        concierge_title: "Concierge Service: Exclusive Hospitality from Start to Finish",
+        concierge_desc: "A completely seamless experience for patients who value their time, utmost comfort, and private discretion in South Tenerife.",
+        shuttle_badge: "Door-to-Door Private Shuttle",
+        shuttle_title: "VIP Mercedes Transfer & Hotel Assistance",
+        shuttle_desc: "Enjoy private Mercedes transfer directly from Tenerife South Airport (TFS) or from leading 5-star resorts (Bahía del Duque, The Ritz-Carlton Abama, Royal Hideaway Corales).",
+        shuttle_feat_1: "Punctual clinic transfers for consultations and procedures",
+        shuttle_feat_2: "Climate-controlled luxury vehicle with discreet private driver",
+        shuttle_feat_3: "Complimentary service arranged by your personal coordinator",
+        concierge_card1_title: "Dedicated Bilingual Coordinator",
+        concierge_card1_desc: "A native patient host will coordinate every stage of your treatment in English, German, Italian, or Spanish with rapid communication.",
+        concierge_card2_title: "Private Recovery Lounge",
+        concierge_card2_desc: "Suites curated to 5-star hospitality standards featuring private waiting quarters, soothing aromatherapy, and continuous clinical monitoring.",
+        concierge_card3_title: "10-Year International Warranty",
+        concierge_card3_desc: "We provide an official Straumann implant passport and E-Max laboratory certification for guaranteed peace of mind back home.",
+        doctors_badge: "Clinical Excellence & Official Credentials",
+        doctors_title: "Medical Directorship & Professional Accreditation",
+        doctors_desc: "All clinical treatments are planned and performed by university specialists officially registered with COEST Santa Cruz de Tenerife.",
+        doc1_role: "Medical Director · Aesthetic Dentistry & Oral Rehabilitation Specialist",
+        doc1_desc: "Over 18 years of clinical experience mastering orofacial harmonization, porcelain micro-veneers, and digital smile design.",
+        doc2_role: "Surgical Director · 3D Guided Implantology & Oral Surgery",
+        doc2_desc: "Certified Straumann specialist in immediate loading, advanced bone grafting, and full-arch teeth in 24 hours.",
+        doc3_role: "Orthodontics Specialist · Invisalign & Spark Clear Aligners",
+        doc3_desc: "Specialist in discreet adult teeth alignment, functional occlusion, and non-invasive smile aesthetics.",
+        treatments_badge: "Cutting-Edge Clinical Protocols",
+        treatments_title: "High-Precision Exclusive Treatments",
+        treatments_desc: "Three-dimensional diagnostics combined with Swiss and German medical-grade biocompatible materials.",
+        serv1_title: "Ultra-Thin E-Max Veneers (Zero-Prep)",
+        serv1_desc: "Custom-crafted 0.3 mm porcelain laminates correcting shade, proportion, and alignment while preserving healthy tooth enamel.",
+        serv1_f1: "Facial symmetry-driven digital aesthetic planning",
+        serv1_f2: "Optimum natural translucency and clinical longevity",
+        serv1_f3: "Direct intraoral aesthetic mock-up trial prior to fabrication",
+        serv2_title: "Straumann 3D Guided Implantology",
+        serv2_desc: "Sub-millimeter implant placement planned via 3D CBCT tomography, enabling fixed temporary teeth on the same day.",
+        serv2_f1: "Immediate load: fixed teeth within 24 hours",
+        serv2_f2: "Roxolid® high-strength titanium with SLActive® surface",
+        serv2_f3: "Minimally invasive keyhole surgery with gentle recovery",
+        serv3_title: "Invisalign Diamond Clear Aligners",
+        serv3_desc: "Custom removable aligners made with proprietary SmartTrack® polymer for completely discreet teeth straightening.",
+        serv3_f1: "3D ClinCheck® digital simulation before starting",
+        serv3_f2: "100% invisible during professional and social meetings",
+        serv3_f3: "Spaced monitoring intervals fully compatible with travel",
+        serv4_title: "Conscious Dental Sedation",
+        serv4_desc: "Specialized anesthesiologist care for anxious patients, dental phobia, or extensive restorative sessions in a single calm visit.",
+        serv4_f1: "Total relaxation without pain or stress perception",
+        serv4_f2: "Continuous vital monitoring by certified medical anesthesiologist",
+        serv4_f3: "Rapid wake-up and comfortable transfer back to your hotel",
+        btn_consult: "Inquire Now",
+        contact_badge: "Direct Phone Service",
+        contact_title: "Schedule Your Private Visit in Costa Adeje",
+        contact_desc: "Our patient concierge will attend to your request personally to arrange your examination, 3D scans, and complimentary transfer.",
+        contact_lbl_phone: "Direct Telephone Line",
+        contact_lbl_wa: "VIP WhatsApp Desk",
+        contact_lbl_schedule: "Consultation Hours",
+        contact_val_schedule: "Monday – Friday: 08:30 – 19:30 (Summer: 08:30 – 16:30)",
+        contact_lbl_location: "Clinic Location",
+        form_title: "Private Appointment Request",
+        form_subtitle: "Please complete this confidential inquiry. Our coordinator will contact you within 2 business hours.",
+        form_lbl_name: "Full Name",
+        form_lbl_phone: "Phone / WhatsApp Number",
+        form_lbl_service: "Treatment of Interest",
+        form_lbl_notes: "Travel or shuttle requirements (Optional)",
+        form_btn_submit: "Confirm Consultation Request",
+        footer_col_treatments: "Specialties",
+        footer_col_concierge: "Concierge Services",
+        footer_col_legal: "Information & Booking"
+      },
+      DE: {
+        nav_concierge: "Concierge-Service",
+        nav_smile: "Smile Design",
+        nav_doctors: "Ärztliche Leitung",
+        nav_treatments: "VIP-Behandlungen",
+        nav_contact: "Privater Kontakt",
+        hero_badge: "Boutique Dental Concierge · Teneriffa Süd",
+        hero_title: "Boutique Dental Concierge & Ästhetische Zahnmedizin in Costa Adeje",
+        hero_desc: "Maßgeschneiderte Zahnästhetik, digitale Lächelnarchitektur und geführte Implantologie in privater Luxusatmosphäre für anspruchsvolle Patienten.",
+        hero_cta_booking: "Privattermin Vereinbaren",
+        hero_cta_concierge: "VIP-Concierge Entdecken",
+        stat_reviews: "Google TrustIndex Bewertung europäischer Patienten",
+        stat_care: "Absolute Diskretion & individuelle Betreuung",
+        stat_warranty: "10 Jahre offizielle klinische Garantie auf Zahnersatz",
+        floating_badge_title: "Persönliche Mehrsprachige Betreuung",
+        floating_badge_desc: "Deutsch · English · Español · Italiano",
+        partners_title: "Zertifizierte Schweizer Präzisionstechnologie & Premiummarken",
+        smile_badge: "Simulation & Echte Klinische Fälle",
+        smile_title: "Fotorealistische Ergebnisse: Die Kunst des Smile Designs",
+        smile_desc: "Verschieben Sie den interaktiven Schieberegler und überzeugen Sie sich von der ästhetischen Transformation durch hauchdünne E-Max Keramikveneers.",
+        slider_label_before: "Vorher: Abnutzung & Lücken",
+        slider_label_after: "Nachher: E-Max Veneers & Harmonie",
+        slider_meta_1_title: "Digital Smile Design (DSD)",
+        slider_meta_1_desc: "Präziser 3D-Intraoralscan ohne unangenehme Abdruckmassen.",
+        slider_meta_2_title: "Hauchdünne E-Max Veneers",
+        slider_meta_2_desc: "Biokompatible Glaskeramik mit natürlicher Lichtbrechung.",
+        slider_meta_3_title: "In Wenigen Sitzungen",
+        slider_meta_3_desc: "Perfekt abgestimmt auf Ihren Urlaub oder Aufenthalt auf Teneriffa.",
+        concierge_badge: "Zahntourismus der Extraklasse in Costa Adeje",
+        concierge_title: "Concierge-Service: Exklusive Gastfreundschaft von Anfang an",
+        concierge_desc: "Ein stressfreies Behandlungserlebnis für Patienten, die höchste Ansprüche an Komfort, Zeitersparnis und Privatsphäre stellen.",
+        shuttle_badge: "Diskreter Hoteltransfer",
+        shuttle_title: "Privater Mercedes VIP-Shuttle & Betreuung",
+        shuttle_desc: "Kostenfreier Abholservice im klimatisierten Mercedes direkt vom Flughafen Teneriffa Süd (TFS) oder aus 5-Sterne-Resorts (Bahía del Duque, Abama, Corales).",
+        shuttle_feat_1: "Pünktliche Transfers zu allen Terminen und Kontrollen",
+        shuttle_feat_2: "Diskreter Chauffeur in einem Luxusfahrzeug",
+        shuttle_feat_3: "Kostenloser Service, koordiniert von Ihrem Betreuer",
+        concierge_card1_title: "Feste Deutsche Patientenbetreuung",
+        concierge_card1_desc: "Ein persönlicher Koordinator betreut Sie auf Deutsch und regelt Termine, Kostenvoranschläge und Arztgespräche.",
+        concierge_card2_title: "Private Erholungslounge",
+        concierge_card2_desc: "Entspannte Suiten nach dem Eingriff mit beruhigender Atmosphäre und kontinuierlicher Betreuung.",
+        concierge_card3_title: "10 Jahre Internationale Garantie",
+        concierge_card3_desc: "Offizieller Straumann Implantatpass und E-Max Laborzertifikat für Sicherheit in Ihrem Heimatland.",
+        doctors_badge: "Klinische Exzellenz & Offizielle Zulassung",
+        doctors_title: "Ärztliche Leitung & Akkreditierung",
+        doctors_desc: "Alle Behandlungen werden von universitären Fachzahnärzten der offiziellen Zahnärztekammer Santa Cruz de Tenerife (COEST) durchgeführt.",
+        doc1_role: "Ärztliche Direktorin · Spezialistin für Ästhetik & Orale Rehabilitation",
+        doc1_desc: "Über 18 Jahre Erfahrung in minimalinvasiver orofazialer Harmonisierung und Keramik-Veneers.",
+        doc2_role: "Chirurgischer Leiter · 3D-Geführte Implantologie & Chirurgie",
+        doc2_desc: "Zertifizierter Straumann-Spezialist für Sofortbelastung und feste Zähne an einem Tag.",
+        doc3_role: "Kieferorthopädin · Invisalign & Spark Aligner",
+        doc3_desc: "Spezialistin für unsichtbare Zahnkorrektur bei Erwachsenen ohne Brackets.",
+        treatments_badge: "Modernste Behandlungsprotokolle",
+        treatments_title: "Exklusive Hochpräzisionsbehandlungen",
+        treatments_desc: "3D-Diagnostik kombiniert mit geprüften biokompatiblen Werkstoffen aus der Schweiz und Deutschland.",
+        serv1_title: "E-Max Keramikveneers (Zero-Prep)",
+        serv1_desc: "Individuell angefertigte 0,3 mm hauchdünne Keramikschalen zur perfekten Korrektur von Farbe und Form.",
+        serv1_f1: "Digital geplante Ästhetik nach Gesichtsproportionen",
+        serv1_f2: "Natürliche Lichtdurchlässigkeit und Langlebigkeit",
+        serv1_f3: "Direktes Mock-Up im Mund vor der Anfertigung",
+        serv2_title: "3D-Geführte Straumann Implantologie",
+        serv2_desc: "Computergeführte Insertion auf Basis digitaler 3D-DVT-Scans mit festsitzenden Zähnen in 24 Stunden.",
+        serv2_f1: "Sofortbelastung: Feste Zähne am selben Tag",
+        serv2_f2: "Hochfestes Roxolid® Titan mit SLActive® Oberfläche",
+        serv2_f3: "Minimalinvasive Schlüssellochchirurgie",
+        serv3_title: "Invisalign Diamond Aligner",
+        serv3_desc: "Nahezu unsichtbare Korrekturschienen für Beruf und Alltag.",
+        serv3_f1: "3D ClinCheck® Vorschau des Behandlungsergebnisses",
+        serv3_f2: "100% diskret und herausnehmbar",
+        serv3_f3: "Optimale Kontrollintervalle für Reisende",
+        serv4_title: "Zahnärztliche Dämmerschlaf-Sedierung",
+        serv4_desc: "Schmerz- und angstfreie Behandlung durch Fachärzte für Anästhesie in einer einzigen Sitzung.",
+        serv4_f1: "Vollkommene Entspannung ohne Behandlungsstress",
+        serv4_f2: "Lückenlose Vitalüberwachung durch Anästhesisten",
+        serv4_f3: "Schnelle Erholung und bequemer Rücktransfer",
+        btn_consult: "Fall Anfragen",
+        contact_badge: "Direkte Telefonbetreuung",
+        contact_title: "Vereinbaren Sie Ihren Privattermin in Costa Adeje",
+        contact_desc: "Unser Patientenkoordinator beantwortet Ihre Anfrage persönlich und organisiert Ihren Transfer sowie 3D-Diagnostik.",
+        contact_lbl_phone: "Direkte Telefonnummer",
+        contact_lbl_wa: "VIP WhatsApp Service",
+        contact_lbl_schedule: "Öffnungszeiten",
+        contact_val_schedule: "Montag – Freitag: 08:30 – 19:30 Uhr (Sommer: 08:30 – 16:30 Uhr)",
+        contact_lbl_location: "Standort der Klinik",
+        form_title: "Exklusive Terminanfrage",
+        form_subtitle: "Füllen Sie dieses vertrauliche Formular aus. Wir melden uns innerhalb von 2 Geschäftsstunden.",
+        form_lbl_name: "Vollständiger Name",
+        form_lbl_phone: "Telefon- / WhatsApp-Nummer",
+        form_lbl_service: "Gewünschte Behandlung",
+        form_lbl_notes: "Besondere Wünsche oder Shuttle-Bedarf (Optional)",
+        form_btn_submit: "Terminanfrage Bestätigen",
+        footer_col_treatments: "Fachbereiche",
+        footer_col_concierge: "Concierge-Leistungen",
+        footer_col_legal: "Information & Termine"
+      },
+      IT: {
+        nav_concierge: "Servizio Concierge",
+        nav_smile: "Design del Sorriso",
+        nav_doctors: "Direzione Medica",
+        nav_treatments: "Trattamenti VIP",
+        nav_contact: "Contatto Privato",
+        hero_badge: "Boutique Dental Concierge · Tenerife Sud",
+        hero_title: "Boutique Dental Concierge & Estetica Avanzata a Costa Adeje",
+        hero_desc: "Odontoiatria d'alta sartoria, armonizzazione orofacciale e digital smile design in un ambiente privato di assoluta riservatezza ed eccellenza clinica.",
+        hero_cta_booking: "Prenota Visita Privata",
+        hero_cta_concierge: "Esperienza Concierge VIP",
+        stat_reviews: "Valutazione Google TrustIndex di pazienti europei",
+        stat_care: "Riservatezza medica e cura dedicata",
+        stat_warranty: "Garanzia clinica ufficiale di 10 anni",
+        floating_badge_title: "Assistenza Multilingue Dedicata",
+        floating_badge_desc: "Italiano · Español · English · Deutsch",
+        partners_title: "Tecnologia di Precisione Svizzera & Brand Certificati",
+        smile_badge: "Simulazione e Casi Clinici Reali",
+        smile_title: "Risultati Fotorealistici: L'Arte del Design del Sorriso",
+        smile_desc: "Scorri il cursore interattivo per scoprire la trasformazione estetica ottenuta con faccette in ceramica E-Max ultrasottili.",
+        slider_label_before: "Prima: Usura e Disallineamento",
+        slider_label_after: "Dopo: Faccette E-Max & Armonia",
+        slider_meta_1_title: "Pianificazione Digitale DSD",
+        slider_meta_1_desc: "Scansione intraorale 3D senza paste fastidiose.",
+        slider_meta_2_title: "Faccette Ultrasottili E-Max",
+        slider_meta_2_desc: "Ceramica biocompatibile con naturale traslucenza.",
+        slider_meta_3_title: "In Poche Sedute",
+        slider_meta_3_desc: "Protocolli studiati per residenti e turisti in vacanza a Tenerife.",
+        concierge_badge: "Turismo Dentale d'Élite a Costa Adeje",
+        concierge_title: "Servizio Concierge: Ospitalità Esclusiva",
+        concierge_desc: "Un'esperienza rilassante e senza stress per pazienti che pretendono il massimo comfort e riservatezza a Tenerife Sud.",
+        shuttle_badge: "Transfer Privato Porta a Porta",
+        shuttle_title: "Van Mercedes VIP & Assistenza in Hotel",
+        shuttle_desc: "Servizio di transfer privato in Mercedes dall'Aeroporto di Tenerife Sud (TFS) o dai resort a 5 stelle (Bahía del Duque, Abama, Corales).",
+        shuttle_feat_1: "Trasferimenti puntuali per visite e interventi",
+        shuttle_feat_2: "Vettura di lusso con autista privato riservato",
+        shuttle_feat_3: "Servizio di cortesia gratuito concordato con il vostro assistente",
+        concierge_card1_title: "Coordinatore Bilingue Dedicato",
+        concierge_card1_desc: "Un assistente personale vi guiderà in italiano lungo tutto il piano di trattamento con comunicazioni dirette.",
+        concierge_card2_title: "Lounge Privata di Recupero",
+        concierge_card2_desc: "Ambiente esclusivo con standard alberghieri a 5 stelle e monitoraggio continuo dopo ogni cura.",
+        concierge_card3_title: "10 Anni di Garanzia Internazionale",
+        concierge_card3_desc: "Passaporto implantare originale Straumann e certificato di laboratorio E-Max per la massima tutela a casa vostra.",
+        doctors_badge: "Eccellenza Clinica e Iscrizione all'Albo",
+        doctors_title: "Direzione Medica e Accreditamento",
+        doctors_desc: "Tutti i trattamenti sono eseguiti da odontoiatri universitari iscritti all'Ordine dei Medici Dentisti di Santa Cruz de Tenerife (COEST).",
+        doc1_role: "Direttrice Medica · Specialista in Estetica Dentale e Riabilitazione Orale",
+        doc1_desc: "Oltre 18 anni di esperienza in armonizzazione estetica, micro-faccette in ceramica e digital smile design.",
+        doc2_role: "Direttore Chirurgico · Implantologia Guidata 3D e Chirurgia Orale",
+        doc2_desc: "Specialista certificato Straumann in carico immediato e denti fissi in 24 ore.",
+        doc3_role: "Specialista in Ortodonzia Invisibile Invisalign & Spark",
+        doc3_desc: "Esperta in allineamento dentale trasparente per adulti senza apparecchi metallici visibili.",
+        treatments_badge: "Protocolli Odontoiatrici all'Avanguardia",
+        treatments_title: "Trattamenti Esclusivi d'Alta Precisione",
+        treatments_desc: "Diagnostica tridimensionale combinata con materiali svizzeri e tedeschi d'eccellenza.",
+        serv1_title: "Faccette E-Max (Zero-Prep)",
+        serv1_desc: "Sottili lamine di porcellana di 0.3 mm per perfezionare forma e colore preservando il dente naturale.",
+        serv1_f1: "Design digitale personalizzato sull'armonia del viso",
+        serv1_f2: "Massima lucentezza naturale e durabilità",
+        serv1_f3: "Mock-up estetico di prova in bocca prima della realizzazione",
+        serv2_title: "Implantologia Guidata Straumann",
+        serv2_desc: "Inserimento guidato da TAC 3D CBCT con protesi fissa provvisoria nella stessa giornata.",
+        serv2_f1: "Carico immediato: denti fissi in 24 ore",
+        serv2_f2: "Titanio Roxolid® con superficie attiva SLActive®",
+        serv2_f3: "Chirurgia mininvasiva con decorso senza dolore",
+        serv3_title: "Ortodonzia Invisibile Invisalign Diamond",
+        serv3_desc: "Allineatori trasparenti per allineare il sorriso con totale discrezione.",
+        serv3_f1: "Simulazione digitale 3D ClinCheck® del risultato finale",
+        serv3_f2: "100% invisibile durante il lavoro e la vita sociale",
+        serv3_f3: "Visite distanziate ideali per chi viaggia spesso",
+        serv4_title: "Sedazione Cosciente Odontoiatrica",
+        serv4_desc: "Assistenza con medico anestesista per curarsi senza paura né ansia in un'unica seduta serena.",
+        serv4_f1: "Rilassamento totale senza avvertire dolore o stress",
+        serv4_f2: "Monitoraggio continuo da parte dell'anestesista",
+        serv4_f3: "Risveglio rapido e rientro confortevole in hotel",
+        btn_consult: "Richiedi Valutazione",
+        contact_badge: "Assistenza Telefonica Diretta",
+        contact_title: "Prenota la tua Visita Privata a Costa Adeje",
+        contact_desc: "Il nostro coordinatore pazienti ti contatterà personalmente per organizzare la visita, le scansioni 3D e il transfer.",
+        contact_lbl_phone: "Telefono Diretto",
+        contact_lbl_wa: "Canale WhatsApp VIP",
+        contact_lbl_schedule: "Orario Visite",
+        contact_val_schedule: "Lunedì – Venerdì: 08:30 – 19:30 (Estate: 08:30 – 16:30)",
+        contact_lbl_location: "Indirizzo della Clinica",
+        form_title: "Richiesta di Visita Esclusiva",
+        form_subtitle: "Compila questo modulo riservato. Ti risponderemo entro 2 ore lavorative.",
+        form_lbl_name: "Nome e Cognome",
+        form_lbl_phone: "Telefono / WhatsApp",
+        form_lbl_service: "Trattamento d'interesse",
+        form_lbl_notes: "Esigenze di transfer o note (Opzionale)",
+        form_btn_submit: "Conferma Richiesta Cita",
+        footer_col_treatments: "Specialità",
+        footer_col_concierge: "Servizi Concierge",
+        footer_col_legal: "Info e Prenotazioni"
+      }
+    };
+
+    function applyLanguage(lang) {
+      if (!translations[lang]) return;
+      const dict = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
+      });
+      document.documentElement.lang = lang.toLowerCase();
+    }
+
+    // Set up multilingual buttons
+    const langButtons = document.querySelectorAll('.lang-btn');
+    langButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        langButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const lang = btn.getAttribute('data-lang');
+        applyLanguage(lang);
+      });
+    });
+
+    /* --------------------------------------------------------------------------
+       2. Interactive Draggable Smile Comparison Slider
+       -------------------------------------------------------------------------- */
+    const sliderContainer = document.getElementById('comparison-slider');
+    const sliderBeforeWrap = document.getElementById('slider-before-wrap');
+    const sliderDivider = document.getElementById('slider-divider');
+    const sliderHandle = document.getElementById('slider-handle');
+    const sliderRangeInput = document.getElementById('slider-range-input');
+
+    function updateSliderPosition(percent) {
+      const clamped = Math.max(0, Math.min(100, percent));
+      sliderContainer.style.setProperty('--slider-pos', clamped + '%');
+      if (sliderRangeInput) {
+        sliderRangeInput.value = clamped;
+      }
+    }
+
+    if (sliderRangeInput) {
+      sliderRangeInput.addEventListener('input', (e) => {
+        updateSliderPosition(parseFloat(e.target.value));
+      });
+    }
+
+    // Mouse and Touch Dragging on Container & Handle
+    let isSliderDragging = false;
+
+    function handlePointerMove(clientX) {
+      const rect = sliderContainer.getBoundingClientRect();
+      const offsetX = clientX - rect.left;
+      const percent = (offsetX / rect.width) * 100;
+      updateSliderPosition(percent);
+    }
+
+    sliderContainer.addEventListener('mousedown', (e) => {
+      isSliderDragging = true;
+      handlePointerMove(e.clientX);
+    });
+
+    window.addEventListener('mouseup', () => {
+      isSliderDragging = false;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isSliderDragging) return;
+      handlePointerMove(e.clientX);
+    });
+
+    // Touch support
+    sliderContainer.addEventListener('touchstart', (e) => {
+      if (e.touches.length > 0) {
+        isSliderDragging = true;
+        handlePointerMove(e.touches[0].clientX);
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      isSliderDragging = false;
+    });
+
+    window.addEventListener('touchmove', (e) => {
+      if (!isSliderDragging || e.touches.length === 0) return;
+      handlePointerMove(e.touches[0].clientX);
+    }, { passive: true });
+
+    /* --------------------------------------------------------------------------
+       3. Booking Form Simulation
+       -------------------------------------------------------------------------- */
+    function handleBoutiqueBooking() {
+      const name = document.getElementById('client-name').value;
+      const phone = document.getElementById('client-phone').value;
+      const treatment = document.getElementById('treatment-select').value;
+      const notes = document.getElementById('client-notes').value;
+
+      const confirmBox = document.getElementById('booking-confirmation');
+      confirmBox.style.display = 'block';
+
+      // Prefill WhatsApp link with client request
+      const message = `Hola Costa Adeje Dental Center, soy ${encodeURIComponent(name)} (${encodeURIComponent(phone)}). Deseo reservar cita privada para: ${encodeURIComponent(treatment)}. Nota: ${encodeURIComponent(notes)}`;
+      const waUrl = `https://wa.me/34683101030?text=${message}`;
+
+      setTimeout(() => {
+        window.open(waUrl, '_blank');
+      }, 900);
+    }
+  </script>
+</body>
+</html>
